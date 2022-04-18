@@ -1,11 +1,41 @@
-.banner{
-   height: 70vh;
-background-image:url("https://cdn.mwallpapers.com/photos/celebrities/tvshows/money-heist-wallpaper-hd-the-galleries-of-hd-wallpaper-android-iphone-hd-wallpaper-background-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-t8nz2.jpg");
-background-repeat: no-repeat;
-background-size: cover;
+.banner {
+  height: 85vh;
+  background-image: url("https://cdn.mwallpapers.com/photos/celebrities/tvshows/money-heist-wallpaper-hd-the-galleries-of-hd-wallpaper-android-iphone-hd-wallpaper-background-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-t8nz2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.bgdark{
-    height: 70vh;
-    background: linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,0.9));
-    
+.bgdark {
+  height: 85vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+.left {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  /* align-items:center; */
+  justify-content: end;
+  margin-left: 30px;
+}
+.head {
+  color: whitesmoke;
+
+  font-size: 3em;
+}
+.para {
+  color: whitesmoke;
+  font-size: 1em;
+}
+.btns {
+  display: flex;
+}
+.btn {
+  width: 130px;
+  height: 40px;
+  font-size: 1em;
+  margin-left: 20px;
 }

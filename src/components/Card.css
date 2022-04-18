@@ -1,0 +1,14 @@
+.card {
+  width: 270px;
+  height: 150px;
+  background-color: rgb(214, 214, 12);
+  border-radius: 4%;
+  border: 1px solid white;
+}
+.head {
+  font-size: 1em;
+  color: red;
+}
+img {
+  width: 270px;
+}

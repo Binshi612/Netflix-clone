@@ -1,20 +1,31 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    width: 100%;
-   
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* background-color: black; */
 }
-.netflix{
-width:150px;
-height: 80px;
-margin-left: 40px;
+.leftnav {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
-.usericon{
-    width: 80px;
-    height: 50px;
-    margin: 20px 30px 0 0 ;
- ;
-   
+.netflix {
+  width: 150px;
+  height: 70px;
+  margin-left: 40px;
+}
+.usericon {
+  width: 50px;
+  height: 50px;
+  margin: 10px 20px 0 0;
+}
+.leftnav span {
+  padding-left: 40px;
+  color: aliceblue;
+  font-size: 1em;
+  cursor: pointer;
+  padding-top: 20px;
+  font-weight: 500;
 }
