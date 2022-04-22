@@ -1,6 +1,6 @@
 .banner {
   height: 85vh;
-  background-image: url("https://cdn.mwallpapers.com/photos/celebrities/tvshows/money-heist-wallpaper-hd-the-galleries-of-hd-wallpaper-android-iphone-hd-wallpaper-background-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-t8nz2.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -21,10 +21,9 @@
   justify-content: end;
   margin-left: 30px;
 }
-.head {
+.left h1 {
   color: whitesmoke;
-
-  font-size: 3em;
+  font-size: 2em;
 }
 .para {
   color: whitesmoke;

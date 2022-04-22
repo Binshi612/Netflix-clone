@@ -1,23 +1,32 @@
-import React from "react";
-import "./Banner.css";
+import React, { useEffect, useState } from "react";
 
+import "./Banner.css";
+import axios from "../Axios";
+import { trendingURL } from "../constants/constant";
 function Banner() {
+  const [movie, setMovie] = useState();
+  useEffect(() => {
+    axios.get(trendingURL).then((response) => {
+      console.log(response);
+      setMovie(response.data.results[0]);
+    });
+  }, []);
+
   return (
-    <div className="banner">
+    <div
+      className="banner"
+      style={{
+        backgroundImage: `url(https://image.tmdb.org/t/p/original/${
+          movie ? movie.backdrop_path : ""
+        })`,
+      }}
+    >
       <div className="bgdark">
         <div className="left">
-          <h1 className="head">Money Heist</h1>
+          <h1 className="head">{movie ? movie.title : ""}</h1>
+          <h1 className="head">{movie ? movie.release_date : ""}</h1>
           {/* <h2 className="sub">97% liked 2018 season 3</h2> */}
-          <p className="para">
-            A criminal mastermind who goes by "The Professor" has a plan to pull
-            off the biggest heist in recorded history -- to print billions of
-            euros in the Royal Mint of Spain. To help him carry out the
-            ambitious plan, he recruits eight people with certain abilities and
-            who have nothing to lose. The group of thieves take hostages to aid
-            in their negotiations with the authorities, who strategize to come
-            up with a way to capture The Professor. As more time elapses, the
-            robbers prepare for a showdown with the police
-          </p>
+          <p className="para">{movie ? movie.overview : ""}</p>
           <div className="btns">
             <button className="btn">Play Now</button>
             <button className="btn">More</button>

@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Banner />
-      <Slider />
+      <Slider title="Action" />
+      <Slider title="Animation" />
     </div>
   );
 }
