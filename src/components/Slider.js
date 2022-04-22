@@ -4,10 +4,10 @@ import Card from "./Card";
 import axios from "../Axios";
 import { actionURL } from "../constants/constant";
 
-const Slider = ({ title }) => {
+const Slider = ({ title, url }) => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
-    axios.get(actionURL).then((response) => {
+    axios.get(url).then((response) => {
       console.log(response.data.results);
       setMovies(response.data.results);
     });
@@ -20,7 +20,7 @@ const Slider = ({ title }) => {
       <div className="Cardlist">
         {movies.map((singleMovie) => {
           console.log(singleMovie);
-          return <Card />;
+          return <Card movies={singleMovie} />;
         })}
       </div>
     </div>

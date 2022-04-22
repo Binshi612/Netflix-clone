@@ -3,12 +3,18 @@ import React, { useEffect, useState } from "react";
 import "./Banner.css";
 import axios from "../Axios";
 import { trendingURL } from "../constants/constant";
+let count = 0;
 function Banner() {
   const [movie, setMovie] = useState();
   useEffect(() => {
     axios.get(trendingURL).then((response) => {
-      console.log(response);
-      setMovie(response.data.results[0]);
+      // console.log(response);
+      setInterval(function () {
+        setMovie(response.data.results[count]);
+        if (count > 20) {
+          count = 0;
+        } else count++;
+      }, 6000);
     });
   }, []);
 

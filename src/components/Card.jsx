@@ -1,11 +1,18 @@
 import React from "react";
 import "./Card.css";
+import { imageURL } from "../constants/constant";
 
-function Card() {
+function Card({ movies }) {
   return (
-    <div className="card">
-      <h1 className="heads">{}</h1>
-      <h2 className="date">release_date</h2>
+    <div
+      className="card"
+      style={{
+        backgroundImage: `url(${imageURL}${
+          movies ? movies.backdrop_path : ""
+        })`,
+      }}
+    >
+      <h1>{movies ? movies.title : ""}</h1>
     </div>
   );
 }
